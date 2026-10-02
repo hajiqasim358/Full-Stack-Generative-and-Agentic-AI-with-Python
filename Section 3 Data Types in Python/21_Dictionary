@@ -1,0 +1,98 @@
+# dictionary in python
+student = {
+    "name": "Qasim",
+    "age": 20,
+    "city": "Islamabad",
+    "grade": "A"
+}
+print(student)
+
+# Accessing values in a dictionary
+print(student["name"])  # Output: Qasim
+print(student["age"])   # Output: 20
+print(student["city"])  # Output: Islamabad
+print(student["grade"]) # Output: A
+
+# to add new key-value pair in dictionary
+student["city"] = "Lahore"
+print(student)  # Output: {'name': 'Qasim', 'age': 20, 'city': 'Lahore', 'grade': 'A'}
+
+student["grade"] = "B"
+print(student)  # Output: {'name': 'Qasim', 'age': 20, 'city': 'Lahore', 'grade': 'B'}
+
+# removing key-value pair from dictionary
+del student["grade"]
+print(student) # Output: {'name': 'Qasim', 'age': 20, 'city': 'Lahore'}
+
+# another way to remove key-value pair from dictionary
+student.pop("city")
+print(student) # Output: {'name': 'Qasim', 'age': 20}
+
+# checking if key exists in dictionary
+student = {
+    "name": "Qasim",
+    "age": 25
+}
+
+print("name" in student)  # Output: True
+print("city" in student)  # Output: False
+
+# another way to check if key exists in dictionary
+
+if "age" in student:
+    print("Age is present in the dictionary")  # Output: Age is present in the dictionary
+
+# getting all keys in a dictionary
+student = {
+    "name": "Qasim",
+    "age": 25,
+    "city": "Islamabad"
+}
+
+print(student.keys()) # Output: dict_keys(['name', 'age', 'city'])
+
+# getting all keys with loop
+for key in student.keys():
+    print(key)  # Output: name, age, city
+
+# getting all values in a dictionary
+print(student.values()) # Output: dict_values(['Qasim', 25, 'Islamabad'])
+
+# another way to get all values with loop
+for value in student.values():
+    print(value) # Output: Qasim, 25, Islamabad
+
+# items in dictionary
+student = {
+    "name": "Qasim",
+    "age": 25,
+    "city": "Islamabad"
+}
+
+for key, value in student.items():
+    print(f"{key}: {value}")  # Output: name: Qasim, age: 25, city: Islamabad
+
+
+## Dictionary with list
+# A dictionary can contain a list.
+student = {
+    "name": "Qasim",
+    "age": 25,
+    "subjects": ["Math", "Physics", "Chemistry"]
+}
+
+print(student["subjects"])  # Output: ['Math', 'Physics', 'Chemistry']
+
+print(student["subjects"][0])  # Output: Math
+
+
+## Dictionary within dictionalry
+student = {
+    "name": "Qasim",
+    "education": {
+        "degree": "MS Data Science",
+        "university": "FAST NUCES"
+    }
+}
+
+print(f" I am currently enrolled in {student['education']['university'] }")  # Output: I am currently enrolled in FAST NUCES
